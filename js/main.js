@@ -1,49 +1,111 @@
-// 스크롤라
-// $('.animate').scrolla();
-
-// var pager=$(".pager ul li");
-// var cont=$("#wrap > section");
-
-// $(window).scroll(function(){
-//     var sct=$(window).scrollTop();
-//     cont.each(function(){
-//         var tg=$(this);
-//         var i=tg.index();
-//         if(tg.offset().top<=sct){
-//             pager.removeClass("on");
-//             pager.eq(i).addClass("on");
-//            };
-//     });
-// });
-
-// pager.click(function(){
-//     var active=$(this).index();
-//     var top=$("html , body").scrollTop();
-//     var tt=cont.eq(active).offset().top;
-//     if(top==0) top=$("body").scrollTop();
-//     $("html , body").stop().animate({
-//         scrollTop:tt
-//     },400);
-//     return false;
-// });
-
-
-
-
-$(function(){
-    $('.pager ul li a').on('click', function(){
-        
-        $('.pager ul li a').removeClass('on')
-        $(this).addClass('on')
-    })
-})
-
 
 
 // scrolla
 $(document).ready(function(){
     $('.animate').scrolla();
 });
+
+
+
+
+// Aside menu 바 색깔
+$(function(){
+  $('.pager ul li a').on('click', function(){
+      
+      $('.pager ul li a').removeClass('on')
+      $(this).addClass('on')
+    
+  })
+})
+
+
+
+// Aside menu 각페이지 도착시 바 색깔 바뀜
+$(function(){
+  var lastScroll = 0;
+  $(window).scroll(function(event){
+
+    var scroll = $(this).scrollTop();
+
+    if(0 <= scroll){
+      $('.pager ul li a').removeClass('on')
+      $('#int').addClass('on')
+    }else {
+      $('#int').removeClass('on');
+    }
+    lastScroll = scroll;
+
+    if(700 < scroll){
+      $('.pager ul li a').removeClass('on')
+      $('#abt').addClass('on')
+    }else {
+      $('#abt').removeClass('on');
+    }
+    lastScroll = scroll;
+
+    if(1500 < scroll){
+      $('.pager ul li a').removeClass('on')
+      $('#re1').addClass('on')
+    }else {
+      $('#re1').removeClass('on');
+    }
+    lastScroll = scroll;
+
+    if(2400 < scroll){
+      $('.pager ul li a').removeClass('on')
+      $('#zcf').addClass('on')
+    }else {
+      $('#zcf').removeClass('on');
+    }
+    lastScroll = scroll;
+
+    if(3500 < scroll){
+      $('.pager ul li a').removeClass('on')
+      $('#re2').addClass('on')
+    }else {
+      $('#re2').removeClass('on');
+    }
+    lastScroll = scroll;
+
+    if(4600 < scroll){
+      $('.pager ul li a').removeClass('on')
+      $('#cbn').addClass('on')
+    }else {
+      $('#cbn').removeClass('on');
+    }
+    lastScroll = scroll;
+
+    if(5700 < scroll){
+      $('.pager ul li a').removeClass('on')
+      $('#re3').addClass('on')
+    }else {
+      $('#re3').removeClass('on');
+    }
+    lastScroll = scroll;
+
+    if(6800 < scroll){
+      $('.pager ul li a').removeClass('on')
+      $('#jbs').addClass('on')
+    }else {
+      $('#jbs').removeClass('on');
+    }
+    lastScroll = scroll;
+
+    if(7900 < scroll){
+      $('.pager ul li a').removeClass('on')
+      $('#out').addClass('on')
+    }else {
+      $('#out').removeClass('on');
+    }
+    lastScroll = scroll;
+
+
+  })
+})
+
+
+
+
 
 
 
