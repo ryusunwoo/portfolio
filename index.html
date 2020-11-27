@@ -6,6 +6,8 @@
     <title>류선우 PORTFOLIO</title>
    <!-- 개인 css -->
    <link rel="stylesheet" href="./css/style.css">
+   <!-- 파비콘 -->
+   <link rel="shortcut icon" href="./images/favicon.ico">
    <!-- aos css -->
    <link rel="stylesheet" href="./css/aos.css">
    <!-- 애니메이트 -->
@@ -20,7 +22,9 @@
     <script src="./js/main.js"></script>
 </head>
 <body oncontextmenu='return false' ondragstart='return false'>
- <script>AOS.init();</script>
+ <script>
+  AOS.init();
+</script>
   
 
 
@@ -41,17 +45,29 @@
 
 
 
+
+
   <!-- intro -->
   <div id="wrap">
     <section id="intro">
-      <h1>매일내일이 기대되는<br>류선우입니다</h1>
+      <div class="typing-txt"> 
+        <ul>
+          <li>오늘이</li>
+          <li>내일이</li>
+          <li>매일이</li>
+          <li>로또가</li>
+        </ul>
+      </div> 
+      <h1> 매일 <p class="typing"></p> 기대되는</h1>
+      
+      <h1>류선우입니다</h1>
       <p>2020 PORTFOLIO</p>
       <div id="call">
         <P>CONTACTS</P>
         <P class="phone">010 - 6561 - 5580</P>
         <P class="mail">ryusunwoo@naver.com</P>
       </div>
-  </section>
+    </section>
 
 
   <!-- about me -->
@@ -99,7 +115,7 @@
           <li>jQuery</li>
         </ul>
         <ul class="sk_bar">
-          <li class="sk80">ps</li>
+          <li class="sk80" class="animate">ps</li>
           <li class="sk70">il</li>
           <li class="sk85">ht</li>
           <li class="sk85">cs</li>
@@ -274,24 +290,92 @@
       </div>
       </section>
 
-    </div>
+    
 
 
       <!-- outro -->
-      <div id="wrap">
-        <section id="intro">
+      <div id="outwrap">
+        <section id="outro">
           <h1>매일내일이 기대되는<br>류선우였습니다<br>감사합니다!</h1>
           <p>2020 PORTFOLIO</p>
-          <div id="call">
+          <div id="outcall">
             <P>CONTACTS</P>
             <P class="phone">010 - 6561 - 5580</P>
             <P class="mail">ryusunwoo@naver.com</P>
           </div>
       </section>
+      </div>
 
 
+    </div><!-- wrap end -->
 
 
+    <!-- 타이핑js -->
+    <script>
+      var typingBool = false; 
+var typingIdx=0; 
+var liIndex = 0;
+var liLength = $(".typing-txt>ul>li").length;
+var del = -1;
+var repeatInt= null;
+var tyInt = null;
 
+
+// 타이핑될 텍스트를 가져온다 
+var typingTxt = $(".typing-txt>ul>li").eq(liIndex).text(); 
+
+typingTxt=typingTxt.split(""); // 한글자씩 자른다. 
+
+if(typingBool==false){ 
+  // 타이핑이 진행되지 않았다면 
+    typingBool=true; 
+    tyInt = setInterval(typing,200); // 첫번재 반복동작 
+} 
+     
+function typing(){ 
+  if(typingIdx<typingTxt.length){ 
+    // 타이핑될 텍스트 길이만큼 반복 
+   $(".typing").append(typingTxt[typingIdx]); 
+    // 한글자씩 이어준다. 
+     typingIdx++; 
+    if(typingIdx == typingTxt.length){
+      //첫번째 단어가 써지면 1분쉰다.
+        clearInterval(tyInt);
+         setTimeout(function(){
+           tyInt = setInterval(typing,200);
+         },1000);
+       }
+   } else{ 
+     
+     //한문장이끝나면
+       if(-typingTxt.length-1 < del ){
+         //한글자씩 지운다.
+          $(".typing").html(typingTxt.slice(0, del))
+          del--;
+       }else{
+         if(liIndex >= liLength-1){
+              liIndex=0;
+         }else{
+           liIndex++;
+         }
+         
+         //변수초기화 
+         typingIdx=0;
+         del= -1;
+         typingTxt = $(".typing-txt>ul>li").eq(liIndex).text(); 
+         
+         //1분후 다음분장 타이핑 
+         clearInterval(tyInt);
+         setTimeout(function(){
+           tyInt = setInterval(typing,200);
+         },1000);
+       }
+     
+
+    } 
+}  
+    </script>
+
+    
 </body>
 </html>
