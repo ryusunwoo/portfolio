@@ -35,18 +35,19 @@ html{scroll-behavior: smooth; height: 100%;}
 }
 .typing-txt{display: none;}
 .typeing-txt ul{list-style:none;}
-.typing {  
-  display: inline; 
-  animation-name: cursor; 
-  animation-duration: 0.3s; 
-  animation-iteration-count: infinite; 
-  font-size: 18px;
-  line-height:1;
+.typing {
+    font-size: 52px;
+    color: #8884FF;
+    display: inline; 
+    animation-name: cursor; 
+    animation-duration: 0.3s; 
+    animation-iteration-count: infinite;
+    /* outline: 1px solid red; */
 } 
 @keyframes cursor{ 
-  0%{border-right: 1px solid #fff} 
-  50%{border-right: 1px solid #000} 
-  100%{border-right: 1px solid #fff} 
+    0%{border-right: 1px solid #fff} 
+    50%{border-right: 1px solid #000} 
+    100%{border-right: 1px solid #fff}
 }
 
 
@@ -70,11 +71,6 @@ html{scroll-behavior: smooth; height: 100%;}
     line-height: 1.3em;
     /* margin-bottom: 40px; */
 }
-/* 바뀌는 타이핑 문구 */
-#intro > h1 > p {
-    font-size: 52px;
-    color: #8884FF;
-}
 #intro > p {
     /* width: 260px; */
     margin-top: 40px;
@@ -84,7 +80,6 @@ html{scroll-behavior: smooth; height: 100%;}
 #intro > #call {
     position: absolute;
     top: 800px;
-    /* outline: 1px solid red; */
 }
 #intro > #call p {
     color: #8884FF;
@@ -795,8 +790,9 @@ html{scroll-behavior: smooth; height: 100%;}
     color: #fff;
     font-size: 48px;
     line-height: 1.3em;
+}
+#outro > .endtyping {
     margin-top: 40px;
-    margin-bottom: 40px;
 }
 #outro > p {
     width: 260px;
