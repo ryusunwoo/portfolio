@@ -55,7 +55,7 @@
           <li>오늘이</li>
           <li>내일이</li>
           <li>매일이</li>
-          <li>로또가</li>
+          <li>나아지는 모습이</li>
         </ul>
       </div> 
       <h1> 매일 <p class="typing"></p> 기대되는</h1>
@@ -296,7 +296,16 @@
       <!-- outro -->
       <div id="outwrap">
         <section id="outro">
-          <h1>매일내일이 기대되는<br>류선우였습니다<br>감사합니다!</h1>
+          <div class="typing-txt"> 
+            <ul>
+              <li>오늘이</li>
+              <li>내일이</li>
+              <li>매일이</li>
+              <li>나아지는 모습이</li>
+            </ul>
+          </div> 
+          <h1 class="endtyping"> 매일 <p class="typing"></p> 기대되는</h1>
+          <h1>류선우였습니다<br>감사합니다!</h1>
           <p>2020 PORTFOLIO</p>
           <div id="outcall">
             <P>CONTACTS</P>
@@ -310,6 +319,8 @@
     </div><!-- wrap end -->
 
 
+
+    
     <!-- 타이핑js -->
     <script>
       var typingBool = false; 
@@ -339,7 +350,7 @@ function typing(){
     // 한글자씩 이어준다. 
      typingIdx++; 
     if(typingIdx == typingTxt.length){
-      //첫번째 단어가 써지면 1분쉰다.
+      //첫번째 단어가 써지면 1초쉰다.
         clearInterval(tyInt);
          setTimeout(function(){
            tyInt = setInterval(typing,200);
@@ -364,7 +375,7 @@ function typing(){
          del= -1;
          typingTxt = $(".typing-txt>ul>li").eq(liIndex).text(); 
          
-         //1분후 다음분장 타이핑 
+         //1분후 다음문장 타이핑 
          clearInterval(tyInt);
          setTimeout(function(){
            tyInt = setInterval(typing,200);
