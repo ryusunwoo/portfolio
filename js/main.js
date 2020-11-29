@@ -8,15 +8,15 @@ $(document).ready(function(){
 
 
 
-// Aside menu 바 색깔
-$(function(){
-  $('.pager ul li a').on('click', function(){
+// Aside menu 클릭시 해당 페이지 바 흰색으로
+// $(function(){
+//   $('.pager ul li a').on('click', function(){
       
-      $('.pager ul li a').removeClass('on')
-      $(this).addClass('on')
+//       $('.pager ul li a').removeClass('on')
+//       $(this).addClass('on')
     
-  })
-})
+//   })
+// })
 
 
 
@@ -109,7 +109,7 @@ $(function(){
 
 
 
-// Aside menu
+// Aside menu 클릭시 해당 페이지로 이동
 $(document).ready(function(){
  
     $('#int').click(function (e) {
@@ -159,5 +159,7 @@ $(document).ready(function(){
 
     
 
-
   });
+
+
+
