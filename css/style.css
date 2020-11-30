@@ -777,14 +777,14 @@ html{scroll-behavior: smooth; height: 100%;}
 #ow {
     width: 100%;
     height: 100%;
-    background: #8884FF;
+    background: #333;
 }
 .ow_wrap {
     position: relative;
     width: 1200px;
     height: 1080px;
     margin: 0 auto;
-    background: #8884FF;
+    background: #333;
     color: #fff;
 }
 .ow_wrap > h1 {
@@ -801,10 +801,34 @@ html{scroll-behavior: smooth; height: 100%;}
     margin-bottom: 40px;
 }
 .ow_wrap > a > img {
-    width: 100%;
-    height: 350px;
+    width: 360px;
+    height: 360px;
 }
 
+.ow_wrap > a {
+    position: relative;
+}
+.ow_wrap > a > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    opacity: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.ow_wrap > a:hover > img {
+    opacity: 0.3;
+    transition: 0.5s;
+}
+.ow_wrap > a:hover > p {
+    opacity: 1;
+    transition: 0.5s;
+    text-align: center;
+}
 
 
 
