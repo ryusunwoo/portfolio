@@ -10,6 +10,8 @@
    <link rel="shortcut icon" href="./images/favicon.ico">
    <!-- aos css -->
    <link rel="stylesheet" href="./css/aos.css">
+   <!-- 컬러박스 css -->
+   <link rel="stylesheet" href="./css/colorbox.css">
    <!-- 애니메이트 -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
    <!-- 제이쿼리 -->
@@ -18,6 +20,8 @@
    <script src="./js/scrolla.jquery.min.js"></script>
    <!-- aos js -->
    <script src="./js/aos.js"></script>
+   <!-- 컬러박스 js -->
+   <script src="./js/jquery.colorbox.js"></script>
     <!-- 개인js -->
     <script src="./js/main.js"></script>
 </head>
@@ -39,6 +43,7 @@
         <li><a href="#" id="cbn"><p></p>　CAFFEBENE</a></li>
         <li><a href="#" id="re3"><p></p>- redesign 3</a></li>
         <li><a href="#" id="jbs"><p></p>　JB자산운용</a></li>
+        <li><a href="#" id="owo"><p></p>　other works</a></li>
         <li><a href="#" id="out"><p></p>outro</a></li>
     </ul>
  </nav>
@@ -290,6 +295,30 @@
       </div>
       </section>
 
+
+      <!-- other works -->
+      <script>
+        $(document).ready(function(){
+          $('a[rel="cb"]').colorbox({
+            width: 1200,
+            height: 800,
+          });
+          
+        })
+      </script>
+
+      <section id="ow">
+        <div class="ow_wrap">
+          <h1>other works</h1>
+          <a rel="cb" title="가천대 모바일 홈" href="./images/gachon.jpg"><img src="./images/gachon.jpg" alt="가천대 모바일"></a>
+          <a rel="cb" title="지마켓 광고 배너" href="./images/gmarket.jpg"><img src="./images/gmarket.jpg" alt="지마켓 배너"></a>
+          <a rel="cb" title="여행사이트 메인홈 제작" href="./images/travel.jpg"><img src="./images/travel.jpg" alt="여행사이트 메인홈"></a>
+          <a rel="cb" title="허브티 광고" href="./images/herb.jpg"><img src="./images/herb.jpg" alt="허브티 광고 제작"></a>
+          <a rel="cb" title="뮤직&아트 페스티벌 광고배너 제작" href="./images/artBanner.jpg"><img src="./images/artBanner.jpg" alt="페스티벌 광고배너"></a>
+          <a rel="cb" title="서울한강 몽땅축제 배너 제작" href="./images/hangang.jpg"><img src="./images/hangang.jpg" alt="한강 몽땅축제 배너"></a>
+        </div>
+      </section>
+
     
 
 
@@ -317,6 +346,7 @@
 
 
     </div><!-- wrap end -->
+
 
 
 
