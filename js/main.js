@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 
 
-// Aside menu 클릭시 해당 페이지 바 흰색으로
+// // Aside menu 바 색깔
 // $(function(){
 //   $('.pager ul li a').on('click', function(){
       
@@ -93,6 +93,14 @@ $(function(){
 
     if(7900 < scroll){
       $('.pager ul li a').removeClass('on')
+      $('#owo').addClass('on')
+    }else {
+      $('#owo').removeClass('on');
+    }
+    lastScroll = scroll;
+
+    if(8900 < scroll){
+      $('.pager ul li a').removeClass('on')
       $('#out').addClass('on')
     }else {
       $('#out').removeClass('on');
@@ -109,7 +117,7 @@ $(function(){
 
 
 
-// Aside menu 클릭시 해당 페이지로 이동
+// Aside menu
 $(document).ready(function(){
  
     $('#int').click(function (e) {
@@ -152,9 +160,14 @@ $(document).ready(function(){
       $('html, body').animate({scrollTop: 7560}, 0);
     });
 
-    $('#out').click(function (e) {
+    $('#owo').click(function (e) {
       e.preventDefault();
       $('html, body').animate({scrollTop: 8640}, 0);
+    });
+
+    $('#out').click(function (e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: 9720}, 0);
     });
 
     
