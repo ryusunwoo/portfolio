@@ -773,6 +773,42 @@ html{scroll-behavior: smooth; height: 100%;}
 }
 
 
+/* other works */
+#ow {
+    width: 100%;
+    height: 100%;
+    background: #8884FF;
+}
+.ow_wrap {
+    position: relative;
+    width: 1200px;
+    height: 1080px;
+    margin: 0 auto;
+    background: #8884FF;
+    color: #fff;
+}
+.ow_wrap > h1 {
+    font-size: 52px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.ow_wrap > a {
+    float: left;
+    width: 360px;
+    height: 360px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+.ow_wrap > a > img {
+    width: 100%;
+    height: 350px;
+}
+
+
+
+
+
 /* outro */
 #outwrap {
     width: 100%;
@@ -845,7 +881,7 @@ html{scroll-behavior: smooth; height: 100%;}
 .pager li p {
     display: inline-block;
     width: 3px;
-    background: #8884FF;
+    background: #fff;
     height: 20px;
     margin-bottom: -6px;
     margin-right: 5px;
@@ -854,8 +890,9 @@ html{scroll-behavior: smooth; height: 100%;}
 }
 
 
-.pager .on p {background: #fff;}
-/* .pager .off p {background: #8884FF;} */
+.pager .on p {background: #8884FF;}
+
+.pager .on {color: #8884ff;}
 
 
 
