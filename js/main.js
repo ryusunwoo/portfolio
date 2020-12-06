@@ -162,7 +162,7 @@ $(document).ready(function(){
 
     $('#owo').click(function (e) {
       e.preventDefault();
-      $('html, body').animate({scrollTop: 8640}, 0);
+      $('html, body').animate({scrollTop: 8680}, 0);
     });
 
     $('#out').click(function (e) {
