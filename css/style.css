@@ -110,8 +110,10 @@ html{scroll-behavior: smooth; height: 100%;}
     /* background-color: #e9e9e9; */
 }
 #who > img {
+    width: 240px;
     margin-bottom: 50px;
     border-radius: 50%;
+    border: 3px solid #8884ff;
 }
 #who > .name {
     font-size: 16px;
