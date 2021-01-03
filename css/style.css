@@ -166,6 +166,7 @@ html{scroll-behavior: smooth; height: 100%;}
 }
 .right > .sk_list > li {
     font-size: 16px;
+    
 }
 .right > .sk_bar {
     position: absolute;
